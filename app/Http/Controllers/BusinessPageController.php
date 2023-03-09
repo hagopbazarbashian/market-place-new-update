@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Country;
 use App\Models\CurrencySymbols;
 use Mail; 
-use App\Mail\Messanger;
+use App\Mail\Messanger; 
 
 class BusinessPageController extends Controller
 {
@@ -23,5 +23,9 @@ class BusinessPageController extends Controller
         $businesspages = Advertisement::where('adtype' , '1')->simplepaginate(30);
         return view('business-page' , compact('businesspages'));
 
+     }
+
+     public function manage(){
+         return view('manage-business-pages.manage-business-pages');
      }
 }

@@ -32,7 +32,7 @@
                             @if ($ad->image->adtype == 1)
                             <span class="rgroup">
                                 <span><input name="ad_type" onchange="paddtoggle(1);" id="ad_type_0" type="radio" value="0"><label for="ad_type_0">personal page</label></span>
-                                <span onclick="show()"><input name="ad_type" onchange="paddtoggle(1);" id="ad_type_1" type="radio" value="1" checked ><label for="ad_type_1">Business page </label></span>
+                                <span><input name="ad_type" onchange="paddtoggle(1);" id="ad_type_1" type="radio" value="1" checked ><label for="ad_type_1">Business page </label></span>
                             </span> 
                             @else
                             <span class="rgroup">
@@ -132,8 +132,29 @@
                                             <option value="0">Choose Childcategory</option>
                                         </select> 
                                     </div>
-                                </div>
+                                </div> 
                             </div> 
+                            @if($ad->image->adtype == 1)
+                            <div class="form-group">
+                                <label for="name">Business Page Name</label>
+                                <input type="text" name="businesspagename" class="form-control" value="{{$ad->image->businesspagename}}">
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="name">Description Business Page</label>
+                                <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page.">{{$ad->image->descriptionbusinesspage}}</textarea>
+                            </div>
+                            @else
+                            <div class="form-group" id="businesspagename">
+                                <label for="name">Business Page Name</label>
+                                <input type="text" name="businesspagename" class="form-control" value="{{$ad->image->businesspagename}}">
+                            </div>
+    
+                            <div class="form-group" id="descriptionbusinesspageb">
+                                <label for="name">Description Business Page</label>
+                                <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page.">{{$ad->image->descriptionbusinesspage}}</textarea>
+                            </div>
+                            @endif
                             <div class="form-group">
                                 <label for="name">Name</label>
                             <input type="text" name="name" class="form-control" value="{{$ad->image->name}}">

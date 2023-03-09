@@ -20,10 +20,10 @@
 {{-- Controller User menu with Check in --}}
 @if(Auth::check())
 <div class="menu">
-    <nav class="menu__nav">
+    <nav class="menu__nav"> 
       <ul class="menu__list r-list">
         <li class="menu__group">
-          <a href="#0" class="menu__link r-link">Manage Business Pages</a>
+          <a href="{{ route('manage-business-pages') }}" class="menu__link r-link">Manage Business Pages</a>
         </li>
         <li class="menu__group">
           <a href="#0" class="menu__link r-link">Post an Ad</a>
