@@ -1,0 +1,79 @@
+.dlrel{
+    margin: 6px 0 0 0;
+    padding: 10px;
+    border-top: 1px solid #f2f2f2;
+    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+    }
+    .trel{
+    font-size: 21px !important;
+    font-weight: bold;
+    color: #393939;
+    display: block;
+    padding: 0 0 6px 2px;
+    text-align: left;
+    }
+    .dlrel>div>a{
+     display: flex;
+     padding: 10px 0 10px 2px;
+        
+    }
+    .dlrel>div>a>img{
+    width: 140px;
+    height: 105px;
+    margin-right: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+   }
+   .dlrel>div>a>div>div:first-child{
+    font-size: 14px;
+    color: #333;
+    display: -webkit-box;
+    overflow: hidden;
+    flex: 1;
+    min-height: 30px;
+    max-height: 68px;
+    text-align: left;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+   }
+   .dlrel>div>a>div>div:nth-child(2){
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 4px;
+
+   }
+   a, a:visited{
+    color: #222; 
+    text-decoration: none;
+    transition: color .2s,background-color .2s;
+   }
+   .dlrel>div>a>div .np{
+    height: 18px;
+  width: 140px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+    
+  }
+  
+ @media only screen and (min-width: 320px) and (max-width: 767px){
+        .dlrel>div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 640px;
+        margin: auto;
+       }
+       
+ }

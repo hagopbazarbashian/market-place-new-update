@@ -1,0 +1,22 @@
+.d{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 25px 0 0 0;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    .d-cart{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+         max-width: 185px !important;
+    }
+    
+    .name{
+        font-size: 15px;
+    }
+       
+}

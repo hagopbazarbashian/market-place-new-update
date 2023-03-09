@@ -1,0 +1,6 @@
+google.com, pub-5533854580432370, DIRECT, f08c47fec0942fa0
+appnexus.com, 11463, DIRECT
+google.com, pub-3795324172534729, RESELLER, f08c47fec0942fa0
+onetag.com, 7aa1a98ab14eef2-OB, DIRECT
+triplelift.com, 13277-EB, DIRECT, 6c33edb13117fd86
+lijit.com, 421986-eb, DIRECT, fafdf38b16bf6b2b #SOVRN

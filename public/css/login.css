@@ -1,0 +1,358 @@
+    /* Shared */
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+
+.flex{
+     display: flex;
+    flex-wrap: nowrap;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    .flex{
+     display: flex;
+    flex-wrap:wrap;
+}
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2f4f7;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.name-content {
+  text-align: center;
+  margin: 78px 0 0 0;
+}
+
+.name-content .logo {
+  font-size: 3.5rem;
+  color: #1877f2;
+}
+
+.name-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 570px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form input:focus {
+  border: 1.8px solid #1877f2;
+}
+
+form .login {
+  outline: none;
+  border: none;
+  background:#8D021F;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .login:hover {
+  background: #8D021F;
+  cursor: pointer;
+}
+
+form a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.8rem;
+  color: #1877f2;
+}
+
+form hr {
+  background: #f7f7f7;
+  margin: 1rem;
+}
+
+form .create-account {
+  outline: none;
+  border: none;
+  background: #8D021F;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+  width: 75%;
+  margin: 0 auto;
+}
+
+form .create-account:hover {
+  background: #8D021F;
+  cursor: pointer;
+}
+
+/* //.........Media Query.........// */
+
+@media (max-width: 500px) {
+  html {
+    font-size: 60%;
+  }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  form .login {
+    font-size: 1.5rem;
+  }
+
+  form a {
+    font-size: 1.5rem;
+  }
+
+  form .create-account {
+    font-size: 1.5rem;
+  }
+
+  .flex-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  form .login {
+    font-size: 1.5rem;
+  }
+
+  form a {
+    font-size: 1.5rem;
+  }
+
+  form .create-account {
+    font-size: 1.5rem;
+  }
+
+  .flex-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  form .login {
+    font-size: 1.5rem;
+  }
+
+  form a {
+    font-size: 1.5rem;
+  }
+
+  form .create-account {
+    font-size: 1.5rem;
+  }
+
+  .flex-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (orientation: landscape) and (max-height: 500px) {
+    .header {
+      height: 90vmax;
+    }
+  }  
+}
+
+
+.social-menu ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-menu ul li{
+  list-style: none;
+  margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+  font-size: 30px;
+  line-height: 60px;
+  transition: .3s;
+  color: #000;
+}
+
+.social-menu ul li .fab:hover{
+  color: #fff;
+}
+
+.social-menu ul li a{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+  transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+  background-color: rgba(0, 0, 0, 0.829);
+}
+.social-menu ul li:nth-child(2) a:hover{
+  background-color: #0077b5;
+}
+.social-menu ul li:nth-child(3) a:hover{
+  background-color: #0077b5;
+}
+.social-menu ul li:nth-child(4) a:hover{
+  background-color: #000;
+}
