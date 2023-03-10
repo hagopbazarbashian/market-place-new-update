@@ -19,13 +19,13 @@ use App\Mail\Messanger;
 
 class BusinessPageController extends Controller
 {
-     public function index(){
-        $businesspages = Advertisement::where('adtype' , '1')->simplepaginate(30);
-        return view('business-page' , compact('businesspages'));
+    public function index(){
+    $businesspages = Advertisement::where('adtype' , '1')->simplepaginate(30);
+    return view('business-page' , compact('businesspages'));
 
-     }
+    }
 
-     public function manage(){
-         return view('manage-business-pages.manage-business-pages');
-     }
+    public function manage(){
+        return view('manage-business-pages.manage-business-pages');
+    }
 }
