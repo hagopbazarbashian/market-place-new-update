@@ -217,19 +217,20 @@ class AdvertisementController extends Controller
                 'currency_id'=>$request->currency_id,
                 'price_status'=>$request->price_status,
                 'urgent'=> $request['urgent'] ?: 0,
-                'adtype'=>$request->ad_type
+                'adtype'=>$request->ad_type,
+                'businesspagename'=>$request->businesspagename,
+                'descriptionbusinesspage'=>$request->descriptionbusinesspage
                 
             ]);
 
             if($request->hasfile('logobusiness')) {
 
-                $image = $request->file('logobusiness');
+                $image = $request->hasfile('logobusiness');
                 $imageName = $image->getClientOriginalName();
                 $image->move(public_path('logobusines'), $imageName);
 
                 $ad->update([
                     'logobusiness'=>$imageName,
-                    
                 ]);
 
 

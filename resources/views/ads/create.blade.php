@@ -116,6 +116,16 @@
                             </div>
                         </div>
 
+                        <div class="form-group" id="businesspagename">
+                            <label for="name">Business Page Name</label>
+                            <input type="text" name="businesspagename" class="form-control" value="{{ old('businesspagename') }}">
+                        </div>
+
+                        <div class="form-group" id="descriptionbusinesspageb">
+                            <label for="name">Description Business Page</label>
+                            <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page." value="{{ old('descriptionbusinesspage') }}"></textarea>
+                        </div>
+
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" class="form-control" value="{{ old('name') }}">

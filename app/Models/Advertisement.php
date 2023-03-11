@@ -27,7 +27,7 @@ class Advertisement extends Model
         'childcategory_id',
         'name',
         'description',
-        'price',
+        'price',  
         'price_status',
         'product_condition',
         'listing_location',
@@ -43,7 +43,9 @@ class Advertisement extends Model
         'urgent',
         'star_rating',
         'adtype',
-        'logobusiness'
+        'logobusiness',
+        'businesspagename',
+        'descriptionbusinesspage'
     ];
 
     public function category(){ 

@@ -26,6 +26,10 @@ class BusinessPageController extends Controller
     }
 
     public function manage(){
-        return view('manage-business-pages.manage-business-pages');
+        $managebusinesspages = Advertisement::with('img')->where('user_id' , auth()->user()->id)->get();
+        foreach($managebusinesspages as $managebusinesspage){
+            $find_business_page = $managebusinesspage::where('adtype' , '1')->first();
+        }
+        return view('manage-business-pages.manage-business-pages' , compact('managebusinesspages' , 'find_business_page'));
     }
 }

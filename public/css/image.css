@@ -445,7 +445,7 @@ DEPENDENCES
   
   :root{
     --colorWhite: #fff;
-    --colorMain: #4557bb;
+    --colorMain: #dc3545;
     --menuCircleBackgroundColor: var(--colorMain);
     --menuHamburgerBackgroundColor: var(--colorWhite);
     --menuHaburgerOutlineColor: var(--colorMain);
