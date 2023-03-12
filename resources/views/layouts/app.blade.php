@@ -273,6 +273,7 @@
     <script src="{{ asset('js/category.js') }}"></script>
     <script src="{{ asset('js/Favoritelist.js') }}"></script>
     <script src="{{ asset('js/index-unde-menu.js') }}"></script>
+    <script src="{{ asset('js/manage-business-pages.blade.js') }}"></script>
 </body>
 
 </html> 

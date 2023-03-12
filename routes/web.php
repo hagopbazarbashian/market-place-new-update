@@ -196,6 +196,7 @@ Route::get('business-page' , [BusinessPageController::class , 'index'])->name('b
 Route::group(['middleware'=>'auth'] , function(){ 
 // manage-business-pages
 Route::get('manage-business-pages' , [BusinessPageController::class , 'manage'])->name('manage-business-pages');
+Route::post('/send-to-business-page' , [BusinessPageController::class , 'sendtobusinesspage']); 
 });
 
 

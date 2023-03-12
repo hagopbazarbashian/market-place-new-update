@@ -45,7 +45,8 @@ class Advertisement extends Model
         'adtype',
         'logobusiness',
         'businesspagename',
-        'descriptionbusinesspage'
+        'descriptionbusinesspage',
+        'status'
     ];
 
     public function category(){ 

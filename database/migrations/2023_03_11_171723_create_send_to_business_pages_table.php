@@ -9,15 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
-     */
+     * @return void 
+     */  
     public function up()
     {
-        Schema::create('currency_symbols', function (Blueprint $table) {
+        Schema::create('send_to_business_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('country');
-            $table->string('currency');
-            $table->string('symbol');
+            $table->bigInteger('advertisement_id');
+            $table->string('image');
+            $table->foreign('advertisement_id')->references('id')->on('advertisements');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('currency_symbols');
+        Schema::dropIfExists('send_to_business_pages');
     }
 };
