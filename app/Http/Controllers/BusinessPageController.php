@@ -50,7 +50,6 @@ class BusinessPageController extends Controller
         }else{
             $SendToBusinessPage = SendToBusinessPage::create([
                 'advertisement_id'=>$checkeds,
-                'status'=>'1'
             ]);
             $status->update([
                 'status'=>'1'
@@ -68,5 +67,12 @@ class BusinessPageController extends Controller
 
         return $html;
        
+    }
+
+    public function singlebusinesspage(Request $request){
+         $SendToBusinessPages = SendToBusinessPage::with('ad')->get();
+         
+         return  view('manage-business-pages.business-single-page' , compact('SendToBusinessPages'));
+
     }
 }

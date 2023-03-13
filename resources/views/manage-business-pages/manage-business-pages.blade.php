@@ -33,7 +33,6 @@
                             <div class="l l3">{{ $advertisement->name }}</div>
                             <div class="l">{!! $advertisement->description !!}</div>
                         </a>
-                        
                     @endforeach
                 </div>
                 

@@ -193,10 +193,12 @@ Route::post('/sendrate' , [FrontEndController::class , 'updaterate']);
 // Show Business page in index
 Route::get('business-page' , [BusinessPageController::class , 'index'])->name('business-page');
 
+// manage-business-pages
 Route::group(['middleware'=>'auth'] , function(){ 
 // manage-business-pages
 Route::get('manage-business-pages' , [BusinessPageController::class , 'manage'])->name('manage-business-pages');
 Route::post('/send-to-business-page' , [BusinessPageController::class , 'sendtobusinesspage']); 
+Route::get('/single-business-page' , [BusinessPageController::class  ,  'singlebusinesspage'])->name('single-business-page');
 });
 
 

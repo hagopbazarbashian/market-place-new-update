@@ -107,7 +107,7 @@
               <a href="{{route('business-page')}}">Business Pages</a>
               <div class="c">
                   @foreach ($businesspage as $businesspages)
-                  <a href="">
+                  <a href="{{ route('single-business-page') }}">
                       <img src="/logobusines/{{$businesspages->logobusiness}}" />
                       <div class="r">
                           <div class="stars" style="--size: 16px; --rating: 49; --ratingfloor: 4;"></div>

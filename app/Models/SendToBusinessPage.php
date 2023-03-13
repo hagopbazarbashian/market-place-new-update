@@ -12,4 +12,10 @@ class SendToBusinessPage extends Model
         'advertisement_id',
         'status'
     ];
+
+
+    public function ad()
+    {
+        return $this->belongsTo(Advertisement::class , 'advertisement_id' , 'id');
+    }
 }
