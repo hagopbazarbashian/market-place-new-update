@@ -14,6 +14,7 @@ use App\Models\Imageforelectro;
 use App\Models\Advertisement;
 use App\Models\advertisementelectro;
 use App\Models\CurrencySymbols;
+use App\Models\BusinessInfo;
 use Str;
 use Illuminate\Support\Facades\File;
 use Mail;
@@ -78,10 +79,15 @@ class AdvertisementController extends Controller
             $data = $request->All(); 
 
             $data['slug'] = $request->name;
-            $data['urgent'] = $request->urgent;
+            $data['urgent'] = $request->urgent; 
             $data['user_id'] = auth()->user()->id;
             $data['adtype'] = $request->ad_type;
             $m2 = Advertisement::create($data);
+            BusinessInfo::create([
+                'advertisement_id'=>$m2->id,
+                'businessphonenumber'=>$request->businessphonenumber,
+                'businessaddress'=>$request->businessaddress
+            ]);
 
             
             if($request->hasfile('imageFile')) {
@@ -157,6 +163,7 @@ class AdvertisementController extends Controller
         $CurrencySymbols = CurrencySymbols::All();
 
         $ad=Image::where('ad_id' , $id)->first();
+
             return view('ads.edit')->with([
                 'ad'=>$ad,
                 'categorys'=>$category,
@@ -198,7 +205,7 @@ class AdvertisementController extends Controller
             }  
             
             
-            $ad->update([
+            $ad->update([     
                 'user_id'=>auth()->user()->id,
                 'category_id'=>$request->category_id,
                 'subcategory_id'=>$request->subcategory_id,

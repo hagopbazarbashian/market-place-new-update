@@ -6,6 +6,13 @@
          display:flex; 
          flex-wrap: wrap;  
     }
+    #businesspagename,#descriptionbusinesspageb,#businessphonenumber,#businessaddress,#border{
+        display:none;
+      }
+      .flex{
+        display: flex;
+        justify-content: center;
+      }
 </style>
     <div class="container">
         <div class="row "> 
@@ -135,25 +142,67 @@
                                 </div> 
                             </div> 
                             @if($ad->image->adtype == 1)
-                            <div class="form-group">
-                                <label for="name">Business Page Name</label>
-                                <input type="text" name="businesspagename" class="form-control" value="{{$ad->image->businesspagename}}">
+                            <div class="image-upload-wrap">
+                                <div class="flex">
+                                    <h2>Business Info</h2>
+                                     
+                                </div>
+                                <div class="drag-text">
+                                    <div class="form-group">
+                                        <label for="name">Business Page Name</label>
+                                        <input type="text" name="businesspagename" class="form-control" value="{{ old('businesspagename') }}">
+                                    </div>
+            
+                                    <div class="form-group formTag">
+                                        <label for="name">Business Phone Number</label>
+                                        <input id="numberType" type="number" class="form-control" name="businessphonenumber" value="{{ old('businessphonenumber') }}">
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="name">Business Address </label>
+                                        <input type="text" name="businessaddress" class="form-control" value="{{ old('businessaddress') }}">
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="name">Description Business Page</label>
+                                        <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page." value="{{ old('descriptionbusinesspage') }}"></textarea>
+                                    </div>
+            
+                                </div>
+                                
                             </div>
     
-                            <div class="form-group">
-                                <label for="name">Description Business Page</label>
-                                <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page.">{{$ad->image->descriptionbusinesspage}}</textarea>
-                            </div>
                             @else
-                            <div class="form-group" id="businesspagename">
-                                <label for="name">Business Page Name</label>
-                                <input type="text" name="businesspagename" class="form-control" value="{{$ad->image->businesspagename}}">
+                            <div class="image-upload-wrap" id="border">
+                                <div class="flex">
+                                    <h2>Business Info</h2>
+                                     
+                                </div>
+                                <div class="drag-text">
+                                    <div class="form-group" id="businesspagename">
+                                        <label for="name">Business Page Name</label>
+                                        <input type="text" name="businesspagename" class="form-control" value="{{ old('businesspagename') }}">
+                                    </div>
+            
+                                    <div class="form-group formTag" id="businessphonenumber">
+                                        <label for="name">Business Phone Number</label>
+                                        <input id="numberType" type="number" class="form-control" name="businessphonenumber" value="{{ old('businessphonenumber') }}">
+                                    </div>
+            
+                                    <div class="form-group" id="businessaddress">
+                                        <label for="name">Business Address </label>
+                                        <input type="text" name="businessaddress" class="form-control" value="{{ old('businessaddress') }}">
+                                    </div>
+            
+                                    <div class="form-group" id="descriptionbusinesspageb">
+                                        <label for="name">Description Business Page</label>
+                                        <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page." value="{{ old('descriptionbusinesspage') }}"></textarea>
+                                    </div>
+            
+                                </div>
+                                
                             </div>
     
-                            <div class="form-group" id="descriptionbusinesspageb">
-                                <label for="name">Description Business Page</label>
-                                <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page.">{{$ad->image->descriptionbusinesspage}}</textarea>
-                            </div>
                             @endif
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -315,6 +364,21 @@ function show() {
 the display property to block*/
 document.getElementById('image')
         .style.display = "block";
+
+document.getElementById('businesspagename')
+.style.display = "block";
+
+document.getElementById('descriptionbusinesspageb')
+.style.display = "block";
+
+document.getElementById('businessphonenumber')
+.style.display = "block";
+
+document.getElementById('businessaddress')
+.style.display = "block";
+
+document.getElementById('border')
+.style.display = "block";
 
 document.getElementById('btnID')
         .style.display = "none";

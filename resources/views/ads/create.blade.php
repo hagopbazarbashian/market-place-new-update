@@ -39,6 +39,8 @@
         display: flex;
         justify-content: center;
       }
+
+      
 </style>
 <div id="wait-animation"></div>
 <div class="container">
@@ -125,7 +127,7 @@
                         <div class="image-upload-wrap" id="border">
                             <div class="flex">
                                 <h2>Business Info</h2>
-                                
+                                 
                             </div>
                             <div class="drag-text">
                                 <div class="form-group" id="businesspagename">
@@ -143,7 +145,6 @@
                                     <input type="text" name="businessaddress" class="form-control" value="{{ old('businessaddress') }}">
                                 </div>
         
-            
                                 <div class="form-group" id="descriptionbusinesspageb">
                                     <label for="name">Description Business Page</label>
                                     <textarea  name="descriptionbusinesspage"  class="form-control" placeholder="Description Business for Page." value="{{ old('descriptionbusinesspage') }}"></textarea>

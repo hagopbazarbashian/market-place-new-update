@@ -10,6 +10,7 @@ use App\Models\Subcategory;
 use App\Models\Country;
 use App\Models\User;
 use App\Models\Image;
+use App\Models\BusinessInfo;
 use App\Models\CurrencySymbols;
 use Cohensive\Embed\Facades\Embed;
 
@@ -77,6 +78,8 @@ class Advertisement extends Model
     public function img(){
         return $this->hasOne(Image::class , 'ad_id');
     }
+
+
 
     // scope
         public function scopeSubCategoryCar($query ,$childcategory){
