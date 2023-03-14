@@ -9,15 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      *
-     * @return void 
-     */  
+     * @return void
+     */
     public function up()
     {
-        Schema::create('send_to_business_pages', function (Blueprint $table) {
+        Schema::create('business_infos', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('advertisement_id');
-            $table->string('image');
-            $table->foreign('advertisement_id')->references('id')->on('advertisements');
+            $table->integer('advertisement_id');
+            $table->integer('businessphonenumber');
+            $table->string('businessaddress');
+            $table->string('businessmoreinfo');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('send_to_business_pages');
+        Schema::dropIfExists('business_infos');
     }
 };

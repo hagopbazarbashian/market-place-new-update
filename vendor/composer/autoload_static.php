@@ -660,6 +660,7 @@ class ComposerStaticInitf91ea4151ca5402bf251a61a3c36ce6e
         'App\\Mail\\Messanger' => __DIR__ . '/../..' . '/app/Mail/Messanger.php',
         'App\\Mail\\withaddproduct' => __DIR__ . '/../..' . '/app/Mail/withaddproduct.php',
         'App\\Models\\Advertisement' => __DIR__ . '/../..' . '/app/Models/Advertisement.php',
+        'App\\Models\\BusinessInfo' => __DIR__ . '/../..' . '/app/Models/BusinessInfo.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\ChFavorite' => __DIR__ . '/../..' . '/app/Models/ChFavorite.php',
         'App\\Models\\ChMessage' => __DIR__ . '/../..' . '/app/Models/ChMessage.php',

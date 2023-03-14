@@ -1,26 +1,7 @@
+@extends('layouts.app')
+@section('content') 
+<link rel="stylesheet" href="{{ asset('/css/managebusinesspage.css') }}">
 <div id="main">
-    <div id="crumb">
-        <ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
-            <li>
-                <a href="/en/"><span>Home</span></a>
-            </li>
-            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                <a href="/pages" itemprop="item"><span itemprop="name">Business Pages</span><meta itemprop="position" content="1" /></a>
-            </li>
-            <li>
-                <div><span>GSC LLC</span></div>
-            </li>
-        </ol>
-    </div>
-    <div id="sstar"><div class="off" onclick="saved.saveUser(1929085)" original-title="Add to Favorites"></div></div>
-    <div class="share">
-        <div class="c">
-            <a target="share" href="#" onclick="ga('send','event','share','facebook');return dlgw('https://www.facebook.com/share.php?u=https://www.list.am/user/1929085',560,430);" original-title="Facebook"></a>
-            <a target="share" href="#" onclick="ga('send','event','share','vkontakte');return dlgw('https://vkontakte.ru/share.php?url=https://www.list.am/user/1929085',560,430);" original-title="В Контакте"></a>
-            <a target="share" href="#" onclick="ga('send','event','share','odkl');return dlgw('https://connect.ok.ru/offer?url=https://www.list.am/user/1929085',560,430);" original-title="Одноклассники"></a>
-            <a href="#" onclick="ga('send','event','share','mail');dlgo('Send to a Friend','/?w=9&amp;url=https%3A%2F%2Fwww.list.am%2Fuser%2F1929085&amp;t=GSC+LLC+-+List.am',500);return false;" original-title="Send to a Friend"></a>
-        </div>
-    </div>
     <div id="puheader">
         <div class="head">
             <div class="bnr"><img src="https://upa.list.am/5638.jpg" original-title="" /></div>
@@ -29,27 +10,7 @@
                     <div class="l"><img src="https://upa.list.am/6172.jpg" original-title="" /></div>
                     <div class="n">
                         <div>GSC LLC</div>
-                        <div class="st">
-                            <div>108 ads</div>
-                            <div>268 followers</div>
-                        </div>
-                        <div class="r">
-                            <a href="/reviews/1929085" original-title="Overall rating: 5.0">
-                                <div class="stars" style="--size: 18px; --rating: 50; --ratingfloor: 5;"></div>
-                                <div class="i">3 reviews</div>
-                            </a>
-                            <div class="btn"><span onclick="dlgo('Write a Review','/?w=42&amp;i=1929085',560);return false;">Write a Review</span></div>
-                            <script type="application/ld+json">
-                                {
-                                    "@context": "https://schema.org/",
-                                    "@type": "AggregateRating",
-                                    "ratingValue": 5,
-                                    "ratingCount": 3,
-                                    "bestRating": 5,
-                                    "itemReviewed": { "@type": "LocalBusiness", "name": "GSC LLC", "image": "https://upa.list.am/6172.jpg" }
-                                }
-                            </script>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="r">
@@ -76,108 +37,10 @@
             ՋԻ-ԷՍ-ՍԻ ՍՊԸ<br />
             Հասցե՝ ք. Երևան Աճեմյան 18
         </div>
-        <div class="news">
-            Hikvision- ը տարիներ շարունակ մնում է առաջատարը տեսահսկման համակարգերի ոլորտում: Այդ արդյունքը պահպանվում է մեր հզոր ColorVu տեխնոլոգիայի միջոցով ևս՝ տեսախցիկներին հնարավորություն տալով գունավոր տեսապատկերներ ստանալ, նույնիսկ
-            նվազագույն լուսավորության պայմաններում
-        </div>
     </div>
     <div id="pagecol">
-        <div id="menul">
-            <div class="filter">
-                <div class="tbar">
-                    <div onclick="filter.toggle()"></div>
-                    <div><a onclick="filter.upd(1)">Apply</a></div>
-                </div>
-                <form name="f" action="/user/1929085" method="GET" id="ff">
-                    <div class="section">
-                        <div class="at">
-                            <div>Location</div>
-                            <div class="lsw" tabindex="-1">
-                                <input type="hidden" name="n" value="0" id="_idn" onchange="filter.upd()" data-placeholder="&nbsp;" />
-                                <div class="me" style="width: 126.094px;">
-                                    <div>All</div>
-                                    <span><input type="text" value="" /></span>
-                                </div>
-                                <div class="l" data-searchname="Search" style="width: 126.094px;">
-                                    <div data-value="0" data-name="All" class="i s">All</div>
-                                    <div data-value="1" data-name="Yerevan" class="i">Yerevan</div>
-                                    <div data-value="6" data-name=" Erebuni" class="i g">Erebuni</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <div class="at">
-                            <div>Price</div>
-                            <div>
-                                <input class="ext" type="text" maxlength="10" value="" name="price1" id="idprice1" pattern="\d*" placeholder="from" onkeypress="return fsubmit(event)" />
-                                <input class="ext" type="text" maxlength="10" value="" name="price2" id="idprice2" pattern="\d*" placeholder="to" onkeypress="return fsubmit(event)" />
-                                <a href="#" class="btn" tabindex="-1" onclick="filter.upd();return false;"><img id="gobtn" src="/img/fgo.png" original-title="" /></a>
-                            </div>
-                        </div>
-                        <div class="at">
-                            <div>Currency</div>
-                            <div>
-                                <div class="lsw" tabindex="-1">
-                                    <input type="hidden" name="crc" value="-1" id="_idcrc" data-placeholder="&nbsp;" />
-                                    <div class="me" style="width: 116.016px;">
-                                        <div>All</div>
-                                        <span><input type="text" value="" /></span>
-                                    </div>
-                                    <div class="l" data-searchname="Search" style="width: 116.016px;">
-                                        <div data-value="-1" data-name="All" class="i s">All</div>
-                                        <div data-value="0" data-name="֏ (AMD)" class="i">֏ (AMD)</div>
-                                        <div data-value="1" data-name="$ (USD)" class="i">$ (USD)</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section cat">
-                        <div class="title">Categories</div>
-                        <div class="cl"><a href="/user/1929085?c=15">Everything Else (2)</a></div>
-                        <div class="cl">
-                            <div class="t">Vehicles</div>
-                            <div class="s">Parts and Accessories<a href="/user/1929085?c=193">Car Electronics (1)</a></div>
-                        </div>
-                        <div class="cl">
-                            <div class="t">Electronics</div>
-                            <a href="/user/1929085?c=76">Everything Else (17)</a>
-                            <div class="s">Audio<a href="/user/1929085?c=184">Speakers and Amplifiers (10)</a></div>
-                            <div class="s">Photo and Video Equipment<a href="/user/1929085?c=181">Video Cameras (31)</a><a href="/user/1929085?c=182">Accessories (16)</a></div>
-                            <div class="s">Computers<a href="/user/1929085?c=99">Peripherals (18)</a><a href="/user/1929085?c=98">Parts (3)</a><a href="/user/1929085?c=100">Accessories (3)</a></div>
-                        </div>
-                        <div class="cl">
-                            <div class="t">Hobbies and Sports</div>
-                            <div class="s">Tourism and Recreation<a href="/user/1929085?c=151">Hunting and Fishing (5)</a></div>
-                        </div>
-                        <div class="cl">
-                            <div class="t">Equipment and Materials</div>
-                            <div class="s">Tools<a href="/user/1929085?c=106">Electrical Devices (1)</a></div>
-                        </div>
-                        <div class="cl">
-                            <div class="t">Jobs</div>
-                            <div class="s">Technology and IT<a href="/user/1929085?c=251">Everything Else (1)</a></div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
         <div id="contentr">
             <div class="dl p">
-                <div class="dlsearch">
-                    <form name="dlf" class="filter" action="/user/1929085" method="GET">
-                        <div class="txt">
-                            <input type="text" name="q" value="" placeholder="Search the ads" />
-                            <div class="ctrl"><input type="submit" tabindex="-1" value="" /></div>
-                        </div>
-                        <a href="#" class="filterbtn" onclick="return filter.toggle()">
-                            <span></span>
-                            <div>Filters</div>
-                        </a>
-                        <input type="hidden" name="_t" value="" />
-                    </form>
-                </div>
                 <div class="gl">
                     <a href="/en/item/16791793">
                         <img data-original="//s.list.am/g/643/56785643.webp" original-title="" src="//s.list.am/g/643/56785643.webp" style="" />
@@ -859,3 +722,5 @@
         </div>
     </div>
 </div>
+@endsection
+

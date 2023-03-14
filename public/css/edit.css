@@ -109,11 +109,11 @@ dl, ol, ul {
         position: relative;
       }
       
-      .image-dropping,
+      /* .image-dropping,
       .image-upload-wrap:hover {
         background-color: #dc3545;
         border: 4px dashed #ffffff;
-      }
+      } */
       
       .image-title-wrap {
         padding: 0 15px 15px 15px;

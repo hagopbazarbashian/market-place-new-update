@@ -56,9 +56,9 @@ class BusinessPageController extends Controller
             ]);
         }
 
-        $html = '';
+        $html = ''; 
 
-        if($delete){
+        if($delete){ 
             $html.= '<div class="alert alert-danger" role="alert">Successfully deleted with your Business Page.</div>';
             
         }else{

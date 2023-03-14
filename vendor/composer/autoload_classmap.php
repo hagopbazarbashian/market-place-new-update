@@ -65,6 +65,7 @@ return array(
     'App\\Mail\\Messanger' => $baseDir . '/app/Mail/Messanger.php',
     'App\\Mail\\withaddproduct' => $baseDir . '/app/Mail/withaddproduct.php',
     'App\\Models\\Advertisement' => $baseDir . '/app/Models/Advertisement.php',
+    'App\\Models\\BusinessInfo' => $baseDir . '/app/Models/BusinessInfo.php',
     'App\\Models\\Category' => $baseDir . '/app/Models/Category.php',
     'App\\Models\\ChFavorite' => $baseDir . '/app/Models/ChFavorite.php',
     'App\\Models\\ChMessage' => $baseDir . '/app/Models/ChMessage.php',
